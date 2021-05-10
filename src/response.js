@@ -1,4 +1,4 @@
-{
+export default {
     "kind": "customsearch#search",
     "url": {
     "type": "application/json",
