@@ -16,7 +16,9 @@ const Home = () => {
                 <div className="home__headerRight">
                 {/*    Link */}
                 {/*    Link */}
+                    <AppsIcon />
                 {/*    ICon */}
+                    <Avatar />
                 {/*    Avatar */}
                 </div>
 
