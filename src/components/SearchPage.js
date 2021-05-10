@@ -14,7 +14,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const SearchPage = () => {
     // getting data from data layer
-    const [{ term }, dispatch] = useStateValue();
+    const [{ term="tesla" }, dispatch] = useStateValue();
     // we call the hook google search to make the request, and we put the term, from the data layer here
     // and returns all the data about that term
     // const {data} = useGoogleSearch(term); /// Live API call
@@ -91,8 +91,17 @@ const SearchPage = () => {
                 <div className="searchPage__results">
                     <p className="searchPage__resultCount">
                         {/* ig gives thsese numbers in the object*/}
-                        About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for Tesla
+                        About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}
                     </p>
+
+                    {data?.items.map(item => (
+                        <div className="searchPage__result">
+                            <a href={item.link}>
+                                {item.displayLink} 🔻
+                            </a>
+
+                        </div>
+                    ))}
                 </div>
             )}
 
