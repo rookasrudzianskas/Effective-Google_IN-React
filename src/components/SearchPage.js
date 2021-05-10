@@ -99,12 +99,14 @@ const SearchPage = () => {
                             <a href={item.link}>
                                 {item.displayLink} 🔻
                             </a>
-
+                            <a className="searchPage__resultTitle" href={item.link}>
+                                <h2>{item.title}</h2>
+                            </a>
+                            <p className="searchPage__resultSnipped"> {item.snippet}</p>
                         </div>
                     ))}
                 </div>
             )}
-
         </div>
     );
 };
