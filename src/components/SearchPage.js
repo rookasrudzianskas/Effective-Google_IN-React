@@ -34,6 +34,10 @@ const SearchPage = () => {
 
                 <div className="searchPage__headerBody">
                     <Search hideButtons />
+
+                    <div className="searchPage__options">
+
+                    </div>
                 </div>
             </div>
 
