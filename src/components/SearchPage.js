@@ -74,10 +74,15 @@ const SearchPage = () => {
                             </div>
                         </div>
 
-                    </div>
-
                     <div className="searchPage__optionsRight">
+                        <div className="searchPage__option">
+                            <Link to="/settings">Settings</Link>
+                        </div>
 
+                        <div className="searchPage__option">
+                            <Link to="/tools">Tools</Link>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
