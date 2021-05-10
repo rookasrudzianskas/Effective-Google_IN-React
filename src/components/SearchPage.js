@@ -3,6 +3,7 @@ import "./styles/SearchPage.css";
 import {useStateValue} from "../StateProvider";
 
 const SearchPage = () => {
+    // getting data from data layer
     const [{ term }, dispatch] = useStateValue();
 
     return (
