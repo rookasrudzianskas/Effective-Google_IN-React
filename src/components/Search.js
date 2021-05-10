@@ -4,9 +4,13 @@ import MicIcon from '@material-ui/icons/Mic';
 import SearchIcon from "@material-ui/icons/Search";
 import { Button } from "@material-ui/core";
 import {useHistory} from "react-router-dom";
+import {useStateValue} from "../StateProvider";
+import {actionTypes} from "../reducer";
 
 // by default it is false
 const Search = ({ hideButtons  = false }) => {
+    // accessing data layer
+    const [{}, dispatch] = useStateValue();
 
     // track all the input in search field
     const [input, setInput] = useState('');
@@ -16,7 +20,13 @@ const Search = ({ hideButtons  = false }) => {
     // the search function fires up!
     const search = e => {
         e.preventDefault();
-        console.log("You hit the search button", input)
+        console.log("You hit the search button", input);
+
+        dispatch({
+            // defining the type
+            type: actionTypes.SET_SEARCH_TERM,
+            term: input
+        })
 
         // some input stuff here
         // we are redirecting it to the search page straight after he submits the form
