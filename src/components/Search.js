@@ -6,7 +6,9 @@ import { Button } from "@material-ui/core";
 
 const Search = () => {
 
-    const [input, setInput] = useState();
+    // track all the input in search field
+    const [input, setInput] = useState('');
+    console.log(input)
     // the search function fires up!
     const search = e => {
         e.preventDefault();
@@ -16,7 +18,7 @@ const Search = () => {
         <div className="search">
             <div className="search__input">
                 <SearchIcon className="search__inputIcon" />
-                <input type="text"/>
+                <input type="text" value={input} onChange={e => setInput(e.target.value)}/>
                 <MicIcon className="search__inputIcon" />
 
             </div>
