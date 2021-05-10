@@ -87,13 +87,14 @@ const SearchPage = () => {
                 </div>
             </div>
 
-            {term && (
+            {true && (
                 <div className="searchPage__results">
-
+                    <p className="searchPage__resultCount">
+                        {/* ig gives thsese numbers in the object*/}
+                        About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for Tesla
+                    </p>
                 </div>
-            ) : (
-
-                )}
+            )}
 
         </div>
     );
