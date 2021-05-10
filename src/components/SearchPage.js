@@ -1,10 +1,13 @@
 import React from 'react';
 import "./styles/SearchPage.css";
 import {useStateValue} from "../StateProvider";
+import useGoogleSearch from "../hooks/useGoogleSearch";
 
 const SearchPage = () => {
     // getting data from data layer
     const [{ term }, dispatch] = useStateValue();
+    // we call the hook google search to make the request, and we put the term, from the data layer here
+    const {data} = useGoogleSearch(term)
     // we get an api key from here
     //https://developers.google.com/custom-search/v1/using_rest
     // we register the search to search worldwide here
