@@ -18,9 +18,9 @@ const Home = () => {
                 <div className="home__headerRight">
                     <Link to='/gmail'>Gmail</Link>
                     <Link to='/images'>Images</Link>
-                {/*    <AppsIcon />*/}
+                    <AppsIcon />
                 {/*    ICon */}
-                {/*    <Avatar />*/}
+                    <Avatar />
                 {/*    Avatar */}
                 </div>
 
