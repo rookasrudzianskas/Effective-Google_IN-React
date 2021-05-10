@@ -2,7 +2,7 @@ import React from 'react';
 import "./Home.css";
 import {Link} from "react-router-dom";
 import AppsIcon from "@material-ui/icons/Apps";
-import { Avatar } from "@material-ui/core";
+import {Avatar, IconButton} from "@material-ui/core";
 
 const Home = () => {
     return (
@@ -19,9 +19,9 @@ const Home = () => {
                     {/* Links to the different pages*/}
                     <Link to='/gmail'>Gmail</Link>
                     <Link to='/images'>Images</Link>
-                    <AppsIcon />
+                    <IconButton><AppsIcon /></IconButton>
                 {/*    ICon */}
-                    <Avatar />
+                    <IconButton><Avatar /></IconButton>
                 {/*    Avatar */}
                 </div>
 
