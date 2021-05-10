@@ -5,6 +5,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Button } from "@material-ui/core";
 
 const Search = () => {
+    // the search function fires up!
+    const search = e => {
+        e.preventDefault();
+    };
+
     return (
         <div className="search">
             <div className="search__input">
@@ -15,7 +20,7 @@ const Search = () => {
             </div>
 
             <div className="search__buttons">
-                <Button variant="outlined">Rokas Search</Button>
+                <Button onClick={search} variant="outlined">Rokas Search</Button>
                 <Button variant="outlined">I'm Feeling Lucky</Button>
             </div>
             
