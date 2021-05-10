@@ -87,19 +87,29 @@ const SearchPage = () => {
                 </div>
             </div>
 
-            {true && (
+            {(
                 <div className="searchPage__results">
                     <p className="searchPage__resultCount">
                         {/* ig gives thsese numbers in the object*/}
-                        About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}
+                        About {data?.searchInformation.formattedTotalResults} results
+                        ({data?.searchInformation.formattedSearchTime} seconds) for {term}
                     </p>
 
                     {data?.items.map(item => (
                         <div className="searchPage__result">
                             <div className="link">
-                            <a href={item.link}>
-                                {item.displayLink} 🔻
-                            </a>
+                                <a href={item.link}>
+                                    {/* this is the location, where in the data object the image is located*/}
+                                    {item.pagemap?.cse_image?.length > 0 item.pagemap?.cse_image[0]?.src && (
+                                        // this is the image url, but id does not work at all. Total shit
+                                        <img
+                                            className="searchPage__resultImage"
+                                            src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0].src}
+                                            alt=""
+                                        )}
+                                    {/* this is the display link from the */}
+                                    {item.displayLink} 🚀
+                                </a>
                             </div>
                             <a className="searchPage__resultTitle" href={item.link}>
                                 <h2>{item.title}</h2>
