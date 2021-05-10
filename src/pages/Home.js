@@ -16,6 +16,7 @@ const Home = () => {
                 </div>
 
                 <div className="home__headerRight">
+                    {/* Links to the different pages*/}
                     <Link to='/gmail'>Gmail</Link>
                     <Link to='/images'>Images</Link>
                     <AppsIcon />
