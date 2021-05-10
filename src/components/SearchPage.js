@@ -96,13 +96,15 @@ const SearchPage = () => {
 
                     {data?.items.map(item => (
                         <div className="searchPage__result">
+                            <div className="link">
                             <a href={item.link}>
                                 {item.displayLink} 🔻
                             </a>
+                            </div>
                             <a className="searchPage__resultTitle" href={item.link}>
                                 <h2>{item.title}</h2>
                             </a>
-                            <p className="searchPage__resultSnipped"> {item.snippet}</p>
+                            <p className="searchPage__resultSnippet"> {item.snippet}</p>
                         </div>
                     ))}
                 </div>
