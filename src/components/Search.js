@@ -5,7 +5,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Button } from "@material-ui/core";
 import {useHistory} from "react-router-dom";
 
-const Search = () => {
+// by default it is false
+const Search = ({ hideButtons  = false }) => {
 
     // track all the input in search field
     const [input, setInput] = useState('');
@@ -34,11 +35,23 @@ const Search = () => {
 
             </div>
 
-            <div className="search__buttons">
-                {/* type submit, refers to the form, and fires the search function from enter or from button press*/}
-                <Button type="submit" onClick={search} variant="outlined">Rokas Search</Button>
-                <Button variant="outlined">I'm Feeling Lucky</Button>
-            </div>
+                {/* if we do not pass the buttons to render out prop, so we render the buttons, otherwise we do not show the buttons :*/}
+                {!hideButtons ? (
+                    // we show the buttons
+                    <div className="search__buttons">
+                        {/* type submit, refers to the form, and fires the search function from enter or from button press*/}
+                    <Button type="submit" onClick={search} variant="outlined">Rokas Search</Button>
+                    <Button variant="outlined">I'm Feeling Lucky</Button>
+                        </div>
+                ): (
+                        // we do not show the buttons
+                        <div className="search__buttons">
+                            {/* type submit, refers to the form, and fires the search function from enter or from button press*/}
+                    <Button className="search__buttonsHidden" type="submit" onClick={search} variant="outlined">Rokas Search</Button>
+                    <Button variant="outlined">I'm Feeling Lucky</Button>
+                        </div>
+                    )}
+
             
         </form>
     );
