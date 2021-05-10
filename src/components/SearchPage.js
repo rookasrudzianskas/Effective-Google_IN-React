@@ -4,6 +4,7 @@ import {useStateValue} from "../StateProvider";
 import useGoogleSearch from "../hooks/useGoogleSearch";
 import Response from "../response";
 import {Link} from "react-router-dom";
+import Search from "./Search";
 
 const SearchPage = () => {
     // getting data from data layer
@@ -28,8 +29,12 @@ const SearchPage = () => {
         <div className="searchPage">
             <div className="searchPage__header">
                 <Link to="/">
-                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt=""/>
+                    <img className="searchPage__logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt=""/>
                 </Link>
+
+                <div className="searchPage__headerBody">
+                    <Search hideButtons />
+                </div>
 
             </div>
 
