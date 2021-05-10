@@ -87,9 +87,14 @@ const SearchPage = () => {
                 </div>
             </div>
 
-            <div className="searchPage__results">
+            {term && (
+                <div className="searchPage__results">
 
-            </div>
+                </div>
+            ) : (
+
+                )}
+
         </div>
     );
 };

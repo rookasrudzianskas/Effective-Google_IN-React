@@ -5,7 +5,7 @@
     background-color: white;
     z-index: 100;
     align-items: flex-end;
-    padding: 30px;
+    padding: 5px 10px 10px 20px;
     border-bottom: 1px solid lightgray;
     align-items: center;
 }
