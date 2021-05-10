@@ -22,3 +22,14 @@
     margin: unset;
     max-width: unset;
 }
+
+.searchPage__options {
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+
+.searchPage__optionsRight,
+.searchPage__optionsLeft {
+    display: flex;
+}
