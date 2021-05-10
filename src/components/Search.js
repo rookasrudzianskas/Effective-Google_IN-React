@@ -8,13 +8,13 @@ const Search = () => {
 
     // track all the input in search field
     const [input, setInput] = useState('');
-    console.log(input)
+    // console.log(input)
     // the search function fires up!
     const search = e => {
         e.preventDefault();
-        console.log("You hit the search button")
+        console.log("You hit the search button", input)
         // some input stuff here
-
+        setInput('');
     };
 
     return (
