@@ -2,14 +2,20 @@ import React from 'react';
 import "./styles/SearchPage.css";
 import {useStateValue} from "../StateProvider";
 import useGoogleSearch from "../hooks/useGoogleSearch";
+import Response from "../response";
+import {Link} from "react-router-dom";
 
 const SearchPage = () => {
     // getting data from data layer
     const [{ term }, dispatch] = useStateValue();
     // we call the hook google search to make the request, and we put the term, from the data layer here
     // and returns all the data about that term
-    const {data} = useGoogleSearch(term);
-
+    // const {data} = useGoogleSearch(term); /// Live API call
+    // getting data from the response object
+    const data = Response;
+    // converting to the object
+    JSON.stringify(data)
+    console.log(data);
     // we get an api key from here
     //https://developers.google.com/custom-search/v1/using_rest
 
@@ -18,11 +24,12 @@ const SearchPage = () => {
     //41d3eac0d47fdca20
     //logging the data we have received
     console.log(data);
-
     return (
         <div className="searchPage">
             <div className="searchPage__header">
-                <h1>{term}</h1>
+                <Link to="/">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt=""/>
+                </Link>
 
             </div>
 
