@@ -7,7 +7,6 @@ import { Avatar } from "@material-ui/core";
 const Home = () => {
     return (
         <div className="home">
-            <h1>This is homepage</h1>
             <div className="home__header">
                 <div className="home__headerLeft">
                     {/*Links in the top to different pages*/}
