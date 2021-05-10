@@ -100,14 +100,18 @@ const SearchPage = () => {
                             <div className="link">
                                 <a href={item.link}>
                                     {/* this is the location, where in the data object the image is located*/}
-                                    {item.pagemap?.cse_image?.length > 0 item.pagemap?.cse_image[0]?.src && (
+                                    {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
                                         // this is the image url, but id does not work at all. Total shit
+                                        // outputting the image with this tag
                                         <img
                                             className="searchPage__resultImage"
-                                            src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0].src}
+                                            src={item.pagemap?.cse_image[0].src}
                                             alt=""
+                                            />
                                         )}
-                                    {/* this is the display link from the */}
+                                    {/* this is the display link from the from the data object and items object*/}
+                                    {/* it basically goes per all the data object, and then goes to the items object, which is in map function, which iterates per all the */}
+                                    {/* items and adds the image if exists */}
                                     {item.displayLink} 🚀
                                 </a>
                             </div>

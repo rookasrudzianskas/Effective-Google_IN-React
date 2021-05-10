@@ -96,6 +96,11 @@
     margin-bottom: 5px;
 }
 
-
+.searchPage__resultImage {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
 
 
