@@ -17,12 +17,14 @@ const SearchPage = () => {
     const [{ term="tesla" }, dispatch] = useStateValue();
     // we call the hook google search to make the request, and we put the term, from the data layer here
     // and returns all the data about that term
-    // const {data} = useGoogleSearch(term); /// Live API call
+    const {data} = useGoogleSearch(term); /// Live API csall
     // getting data from the response object
-    const data = Response;
-    // converting to the object
-    JSON.stringify(data)
-    console.log(data);
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@ TESTING $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    // const data = Response;
+    // // converting to the object
+    // JSON.stringify(data)
+    // console.log(data);
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@ END OF TESTING $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     // we get an api key from here
     //https://developers.google.com/custom-search/v1/using_rest
 
@@ -87,7 +89,7 @@ const SearchPage = () => {
                 </div>
             </div>
 
-            {(
+            {term && (
                 <div className="searchPage__results">
                     <p className="searchPage__resultCount">
                         {/* ig gives thsese numbers in the object*/}
