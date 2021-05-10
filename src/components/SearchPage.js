@@ -5,6 +5,12 @@ import useGoogleSearch from "../hooks/useGoogleSearch";
 import Response from "../response";
 import {Link} from "react-router-dom";
 import Search from "./Search";
+import SearchIcon from "@material-ui/icons/Search";
+import {DescriptionOutlined, LocalOffer} from "@material-ui/icons";
+import ImageIcon from '@material-ui/icons/Image';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import RoomIcon from '@material-ui/icons/Room';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const SearchPage = () => {
     // getting data from data layer
@@ -36,6 +42,41 @@ const SearchPage = () => {
                     <Search hideButtons />
 
                     <div className="searchPage__options">
+                        <div className="searchPage__optionsLeft">
+                            <div className="searchPage__option">
+                                <SearchIcon />
+                                <Link to="/all">All</Link>
+                            </div>
+
+                            <div className="searchPage__option">
+                                <DescriptionOutlined />
+                                <Link to="/news">News</Link>
+                            </div>
+
+                            <div className="searchPage__option">
+                                <ImageIcon />
+                                <Link to="/images">Images</Link>
+                            </div>
+
+                            <div className="searchPage__option">
+                                <LocalOfferIcon />
+                                <Link to="/shopping">Shopping</Link>
+                            </div>
+
+                            <div className="searchPage__option">
+                                <RoomIcon />
+                                <Link to="/maps">Maps</Link>
+                            </div>
+
+                            <div className="searchPage__option">
+                                <MoreVertIcon />
+                                <Link to="/more">more</Link>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="searchPage__optionsRight">
 
                     </div>
                 </div>
