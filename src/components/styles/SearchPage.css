@@ -7,6 +7,7 @@
     align-items: flex-end;
     padding: 30px;
     border-bottom: 1px solid lightgray;
+    align-items: center;
 }
 
 .searchPage__logo {
@@ -17,7 +18,6 @@
 
 .searchPage__headerBody > .searchPage__input {
     /* we are overriding the search input styling*/
-    margin-top: 0;
     width: unset;
     margin: unset;
     max-width: unset;

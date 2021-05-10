@@ -35,7 +35,6 @@ const SearchPage = () => {
                 <div className="searchPage__headerBody">
                     <Search hideButtons />
                 </div>
-
             </div>
 
             <div className="searchPage__results">
