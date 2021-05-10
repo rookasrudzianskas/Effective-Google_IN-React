@@ -6,6 +6,10 @@ const SearchPage = () => {
     // getting data from data layer
     const [{ term }, dispatch] = useStateValue();
 
+    //https://developers.google.com/custom-search/v1/using_rest
+
+
+
     return (
         <div className="searchPage">
             <div className="searchPage__header">
