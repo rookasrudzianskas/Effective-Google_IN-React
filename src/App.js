@@ -8,14 +8,12 @@ function App() {
         <Router>
             <Switch>
                 <Route path="/search">
-                    <h1>This is earch</h1>
+                    <h1>This is search</h1>
 
                     {/*    Search page (the results page) */}
                 </Route>
 
                 <Route path="/">
-                    <h1>This is home</h1>
-
                     <Home />
                     {/*    Home page (the one with the search on) */}
                 </Route>
