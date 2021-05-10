@@ -48,7 +48,7 @@ const Search = ({ hideButtons  = false }) => {
                         <div className="search__buttons">
                             {/* type submit, refers to the form, and fires the search function from enter or from button press*/}
                     <Button className="search__buttonsHidden" type="submit" onClick={search} variant="outlined">Rokas Search</Button>
-                    <Button variant="outlined">I'm Feeling Lucky</Button>
+                    <Button className="search__buttonsHidden"  variant="outlined">I'm Feeling Lucky</Button>
                         </div>
                     )}
 
